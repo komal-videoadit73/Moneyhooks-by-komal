@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Money Hooks by Komal — Simple Money Lessons for Real Life</title>
-<meta name="description" content="Money Hooks by Komal helps students, parents and beginners learn practical budgeting, saving and smart spending through short, friendly lessons.">
+<title>Money Hooks by Komal | Practical Financial Lessons</title>
+<meta name="description" content="Money Hooks by Komal — simple, practical lessons on budgeting, saving and smart spending for students, parents and beginners.">
 
-<!-- Fonts: Fraunces for warm editorial headings, Plus Jakarta Sans for clean readable body text -->
+<!-- Fonts: Fraunces (display), Inter (body), IBM Plex Mono (data/utility) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -17,17 +17,16 @@
 
 <!-- ============ HEADER / NAV ============ -->
 <header class="site-header" id="top">
-  <div class="container header-inner">
-    <a href="#top" class="logo">
+  <div class="header-inner container">
+    <a href="#top" class="logo" aria-label="Money Hooks by Komal — home">
       <span class="logo-mark" aria-hidden="true">
         <svg viewBox="0 0 40 40" width="34" height="34">
-          <circle cx="20" cy="20" r="18" fill="none" stroke="url(#logoGrad)" stroke-width="2"/>
-          <path d="M13 24c1.5-6 4-9 7-9s5.5 3 7 9" fill="none" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="20" cy="15" r="2.6" fill="#D4AF6A"/>
+          <path d="M14 6 C14 6 12 6 12 12 L12 24 C12 29 16 31 20 29 C24 27 24 22 20 21 C17 20 16 23 18 24.5" fill="none" stroke="url(#hookGrad)" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="14" cy="6" r="2.2" fill="url(#hookGrad)"/>
           <defs>
-            <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
-              <stop offset="0" stop-color="#6FA0FF"/>
-              <stop offset="1" stop-color="#D4AF6A"/>
+            <linearGradient id="hookGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#F0D48A"/>
+              <stop offset="1" stop-color="#D9B25C"/>
             </linearGradient>
           </defs>
         </svg>
@@ -36,20 +35,20 @@
     </a>
 
     <nav class="main-nav" id="mainNav">
-      <a href="#about" data-i18n="nav_about">About</a>
-      <a href="#mission" data-i18n="nav_mission">Mission</a>
-      <a href="#videos" data-i18n="nav_videos">Videos</a>
-      <a href="#tips" data-i18n="nav_tips">Tips</a>
-      <a href="#calculator" data-i18n="nav_calculator">Calculator</a>
-      <a href="#faq" data-i18n="nav_faq">FAQ</a>
-      <a href="#contact" class="nav-cta" data-i18n="nav_contact">Contact</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#mission" data-i18n="nav.mission">Mission</a>
+      <a href="#videos" data-i18n="nav.videos">Videos</a>
+      <a href="#tips" data-i18n="nav.tips">Tips</a>
+      <a href="#calculator" data-i18n="nav.calculator">Calculator</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-i18n="nav.contact" class="nav-cta">Contact</a>
     </nav>
 
-    <div class="header-actions">
+    <div class="header-controls">
       <div class="lang-switcher" id="langSwitcher">
-        <button class="lang-btn" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
-          <span id="langCurrent">EN</span>
-          <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        <button class="lang-current" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langCurrentLabel">EN</span>
+          <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <ul class="lang-menu" id="langMenu" role="listbox">
           <li role="option" data-lang="en">English</li>
@@ -65,90 +64,90 @@
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-glow glow-blue"></div>
-    <div class="hero-glow glow-gold"></div>
-  </div>
-
+<section class="hero" id="home">
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="container hero-inner">
     <div class="hero-copy reveal">
-      <p class="eyebrow" data-i18n="hero_eyebrow">Financial literacy, one lesson at a time</p>
-      <h1 data-i18n="hero_heading">Money Hooks <span class="accent-text">by Komal</span></h1>
-      <p class="hero-intro" data-i18n="hero_intro">Hello! I'm Komal. I enjoy sharing simple, practical money lessons that help people build better financial habits. My goal is to make budgeting, saving, and smart spending easy to understand through short educational content.</p>
+      <p class="eyebrow" data-i18n="hero.eyebrow">Financial Educator &amp; Budgeting Coach</p>
+      <h1>Money Hooks <span class="accent-italic">by Komal</span></h1>
+      <p class="hero-tagline" data-i18n="hero.tagline">Small money lessons that quietly change big habits.</p>
+      <p class="hero-intro" data-i18n="hero.intro">Hello! I'm Komal. I enjoy sharing simple, practical money lessons that help people build better financial habits. My goal is to make budgeting, saving, and smart spending easy to understand through short educational content.</p>
 
       <div class="hero-buttons">
-        <a href="#videos" class="btn btn-primary" data-i18n="hero_btn_videos">Watch Videos</a>
-        <a href="#contact" class="btn btn-ghost" data-i18n="hero_btn_contact">Contact Me</a>
+        <a href="#videos" class="btn btn-primary" data-i18n="hero.btnVideos">Watch Videos</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">Contact Me</a>
       </div>
 
-      <div class="hero-credentials">
-        <div class="credential">
-          <strong data-i18n="hero_cred1_num">3+</strong>
-          <span data-i18n="hero_cred1_label">years teaching everyday finance</span>
-        </div>
-        <div class="credential">
-          <strong data-i18n="hero_cred2_num">6</strong>
-          <span data-i18n="hero_cred2_label">core money topics covered</span>
-        </div>
-        <div class="credential">
-          <strong data-i18n="hero_cred3_num">100%</strong>
-          <span data-i18n="hero_cred3_label">beginner friendly, always free</span>
-        </div>
+      <div class="hero-background-badge">
+        <span data-i18n="hero.badge1">Financial Educator</span>
+        <span class="dot" aria-hidden="true">•</span>
+        <span data-i18n="hero.badge2">Content Creator</span>
+        <span class="dot" aria-hidden="true">•</span>
+        <span data-i18n="hero.badge3">Budgeting Coach</span>
       </div>
     </div>
 
-    <!-- Signature element: an animated rising "savings stack" card -->
-    <div class="hero-visual reveal" style="--delay:.15s">
-      <div class="glass-card savings-stack-card">
-        <div class="stack-card-head">
-          <span data-i18n="hero_stack_label">This month's savings</span>
-          <span class="stack-pill" data-i18n="hero_stack_pill">on track</span>
-        </div>
-        <div class="coin-stack" aria-hidden="true">
-          <div class="coin" style="--n:0"></div>
-          <div class="coin" style="--n:1"></div>
-          <div class="coin" style="--n:2"></div>
-          <div class="coin" style="--n:3"></div>
-          <div class="coin" style="--n:4"></div>
-          <div class="coin coin-top" style="--n:5"></div>
-        </div>
-        <svg class="growth-line" viewBox="0 0 260 70" preserveAspectRatio="none">
-          <polyline points="0,60 40,50 80,52 120,34 160,38 200,18 260,10" fill="none" stroke="#D4AF6A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="glass-card hero-illustration">
+        <!-- Wallet & coin illustration -->
+        <svg viewBox="0 0 320 320" width="100%" height="100%">
+          <defs>
+            <linearGradient id="walletBlue" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1B3A6B"/>
+              <stop offset="1" stop-color="#3D7CFF"/>
+            </linearGradient>
+            <linearGradient id="coinGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#F0D48A"/>
+              <stop offset="1" stop-color="#D9B25C"/>
+            </linearGradient>
+          </defs>
+          <rect x="40" y="120" width="220" height="140" rx="18" fill="url(#walletBlue)" opacity="0.9"/>
+          <rect x="40" y="120" width="220" height="34" rx="12" fill="#0E1830" opacity="0.55"/>
+          <rect x="170" y="168" width="70" height="46" rx="10" fill="#0E1830" opacity="0.6"/>
+          <circle cx="205" cy="191" r="8" fill="url(#coinGold)"/>
+          <circle cx="220" cy="90" r="30" fill="url(#coinGold)"/>
+          <circle cx="220" cy="90" r="30" fill="none" stroke="#0E1830" stroke-opacity="0.25" stroke-width="2"/>
+          <text x="220" y="97" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" fill="#0E1830" opacity="0.7">$</text>
+          <circle cx="268" cy="130" r="16" fill="url(#coinGold)" opacity="0.9"/>
+          <circle cx="90" cy="95" r="12" fill="url(#coinGold)" opacity="0.7"/>
         </svg>
-        <div class="stack-card-foot">
-          <div>
-            <span class="foot-label" data-i18n="hero_stack_saved">Saved so far</span>
-            <strong>Rs. 18,400</strong>
-          </div>
-          <div>
-            <span class="foot-label" data-i18n="hero_stack_goal">Goal</span>
-            <strong>Rs. 25,000</strong>
-          </div>
-        </div>
+      </div>
+      <div class="floating-chip chip-a">
+        <svg width="18" height="18" viewBox="0 0 40 40"><path d="M14 6 C14 6 12 6 12 12 L12 24 C12 29 16 31 20 29 C24 27 24 22 20 21 C17 20 16 23 18 24.5" fill="none" stroke="#D9B25C" stroke-width="3" stroke-linecap="round"/><circle cx="14" cy="6" r="2.4" fill="#D9B25C"/></svg>
+        <span data-i18n="hero.chip1">Save first</span>
+      </div>
+      <div class="floating-chip chip-b">
+        <svg width="18" height="18" viewBox="0 0 40 40"><path d="M14 6 C14 6 12 6 12 12 L12 24 C12 29 16 31 20 29 C24 27 24 22 20 21 C17 20 16 23 18 24.5" fill="none" stroke="#3D7CFF" stroke-width="3" stroke-linecap="round"/><circle cx="14" cy="6" r="2.4" fill="#3D7CFF"/></svg>
+        <span data-i18n="hero.chip2">Spend smart</span>
       </div>
     </div>
   </div>
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
 </section>
 
 <!-- ============ ABOUT ============ -->
 <section class="section" id="about">
   <div class="container about-grid">
-    <div class="about-image reveal">
-      <img src="https://images.unsplash.com/photo-1707902665498-a202981fb5ac?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Notebook and calculator used for planning a personal budget" loading="lazy">
-      <div class="about-image-tag glass-card">
-        <span data-i18n="about_tag_title">Real lessons</span>
-        <span data-i18n="about_tag_sub">no jargon, just clarity</span>
+    <div class="about-visual reveal">
+      <div class="glass-card about-illustration">
+        <svg viewBox="0 0 300 300" width="100%" height="100%">
+          <rect x="50" y="40" width="200" height="220" rx="16" fill="#131F3D"/>
+          <rect x="50" y="40" width="200" height="220" rx="16" fill="none" stroke="#3D7CFF" stroke-opacity="0.35" stroke-width="1.5"/>
+          <line x1="75" y1="90" x2="225" y2="90" stroke="#9AA6C0" stroke-opacity="0.35" stroke-width="1.5"/>
+          <line x1="75" y1="120" x2="225" y2="120" stroke="#9AA6C0" stroke-opacity="0.35" stroke-width="1.5"/>
+          <line x1="75" y1="150" x2="190" y2="150" stroke="#9AA6C0" stroke-opacity="0.35" stroke-width="1.5"/>
+          <circle cx="150" cy="205" r="34" fill="url(#coinGold)"/>
+          <text x="150" y="213" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" fill="#0E1830" opacity="0.75">$</text>
+          <path d="M120 205 a30 30 0 1 1 60 0" fill="none" stroke="#F0D48A" stroke-width="2" stroke-dasharray="3 4" opacity="0.6"/>
+        </svg>
       </div>
     </div>
-
-    <div class="about-copy reveal" style="--delay:.1s">
-      <p class="eyebrow" data-i18n="about_eyebrow">About Me</p>
-      <h2 data-i18n="about_heading">Hi, I'm Komal — welcome to my little corner of the internet.</h2>
-      <p data-i18n="about_p1">I didn't grow up learning about money in school, and I don't think most of us did. I picked things up slowly — through mistakes, through questions I was embarrassed to ask, and through a lot of trial and error with my own budget. Money Hooks by Komal is the resource I wish I'd had when I was starting out.</p>
-      <p data-i18n="about_p2">I started this project because I kept meeting people — students figuring out their first allowance, parents trying to teach their kids about saving, families juggling a tight monthly budget — who all wanted the same thing: someone to explain money in plain language, without judgment and without selling them something.</p>
-      <p data-i18n="about_p3">That's what I try to do here. Every lesson, video and tip is written the way I'd explain it to a friend over coffee — practical, honest, and easy to actually use. If it helps even one person feel a little more in control of their money, this project has done its job.</p>
-      <a href="#contact" class="text-link" data-i18n="about_link">Get in touch with me →</a>
+    <div class="about-copy reveal">
+      <p class="eyebrow" data-i18n="about.eyebrow">About Komal</p>
+      <h2 data-i18n="about.title">A little about why I do this</h2>
+      <p data-i18n="about.p1">I'm Komal, and money confused me for a long time too. Nobody sat me down and explained how a budget actually works, or why saving a little every month matters more than saving a lot once in a while. I learned most of it the slow way — through trial, error, and a fair share of overspending.</p>
+      <p data-i18n="about.p2">That's really why Money Hooks exists. I wanted to build the resource I wish I'd had — short, honest lessons that explain money in plain language, without jargon or judgment. Whether you're a student getting your first allowance, a parent trying to teach your kids, or just someone who wants a clearer picture of where your money goes, this is a space to learn at your own pace.</p>
+      <p data-i18n="about.p3">My goal isn't to make you an expert overnight. It's to help you build small, steady habits — the kind that quietly add up and make a real difference over time.</p>
     </div>
   </div>
 </section>
@@ -157,201 +156,143 @@
 <section class="section section-alt" id="mission">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="mission_eyebrow">My Mission</p>
-      <h2 data-i18n="mission_heading">Three ideas guide everything I teach</h2>
+      <p class="eyebrow" data-i18n="mission.eyebrow">My Mission</p>
+      <h2 data-i18n="mission.title">Three ideas I keep coming back to</h2>
     </div>
-
-    <div class="mission-grid">
+    <div class="card-grid mission-grid">
       <div class="glass-card mission-card reveal">
         <div class="mission-icon" aria-hidden="true">
-          <!-- modern savings box (no piggy bank), with coin slot and a coin dropping in -->
-          <svg viewBox="0 0 48 48" width="30" height="30">
-            <rect x="8" y="18" width="32" height="22" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/>
-            <path d="M8 26h32" stroke="currentColor" stroke-width="2.4"/>
-            <rect x="19" y="21" width="10" height="2.4" rx="1.2" fill="currentColor"/>
-            <circle cx="24" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="2.2"/>
-            <path d="M24 15.4v4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-          </svg>
+          <svg width="30" height="30" viewBox="0 0 30 30"><path d="M15 3 C15 3 6 9 6 17 a9 9 0 0 0 18 0 C24 9 15 3 15 3 Z" fill="none" stroke="#D9B25C" stroke-width="1.8"/><path d="M15 11 v9 M11.5 15.5 h7" stroke="#D9B25C" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
-        <h3 data-i18n="mission_card1_title">Save Wisely</h3>
-        <p data-i18n="mission_card1_body">Saving isn't about giving things up — it's about deciding what actually matters to you and putting your money there first.</p>
+        <h3 data-i18n="mission.card1Title">Save Wisely</h3>
+        <p data-i18n="mission.card1Text">Saving isn't about giving everything up. It's about setting a little aside first, consistently, so your future self has options.</p>
       </div>
-
-      <div class="glass-card mission-card reveal" style="--delay:.1s">
+      <div class="glass-card mission-card reveal">
         <div class="mission-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="30" height="30"><path d="M6 24h36M30 12l12 12-12 12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="30" height="30" viewBox="0 0 30 30"><rect x="4" y="9" width="22" height="14" rx="2.5" fill="none" stroke="#3D7CFF" stroke-width="1.8"/><line x1="4" y1="14" x2="26" y2="14" stroke="#3D7CFF" stroke-width="1.8"/><circle cx="9" cy="19" r="1.6" fill="#3D7CFF"/></svg>
         </div>
-        <h3 data-i18n="mission_card2_title">Spend Smartly</h3>
-        <p data-i18n="mission_card2_body">Every rupee you spend is a small decision. I help you slow down just enough to make that decision on purpose, not on impulse.</p>
+        <h3 data-i18n="mission.card2Title">Spend Smartly</h3>
+        <p data-i18n="mission.card2Text">Every purchase is a choice. Spending smart just means pausing long enough to ask if it's a choice you actually want to make.</p>
       </div>
-
-      <div class="glass-card mission-card reveal" style="--delay:.2s">
+      <div class="glass-card mission-card reveal">
         <div class="mission-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="30" height="30"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M24 15v9l7 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="15" r="11" fill="none" stroke="#D9B25C" stroke-width="1.8"/><path d="M15 9 v6 l4 3" stroke="#D9B25C" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
         </div>
-        <h3 data-i18n="mission_card3_title">Build Better Habits</h3>
-        <p data-i18n="mission_card3_body">Good money management isn't a one-time fix. It's small, repeatable habits that compound quietly over months and years.</p>
+        <h3 data-i18n="mission.card3Title">Build Better Habits</h3>
+        <p data-i18n="mission.card3Text">Good money habits aren't built overnight. They're built one small, repeated decision at a time — and that's exactly where I focus.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FEATURED VIDEOS ============ -->
+<!-- ============ VIDEOS ============ -->
 <section class="section" id="videos">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="videos_eyebrow">Featured Educational Videos</p>
-      <h2 data-i18n="videos_heading">Short lessons, picked with care</h2>
-      <p class="section-sub" data-i18n="videos_sub">A hand-picked set of videos covering the topics I get asked about most. Press play right here — no need to leave the page.</p>
+      <p class="eyebrow" data-i18n="videos.eyebrow">Watch &amp; Learn</p>
+      <h2 data-i18n="videos.title">Featured educational videos</h2>
+      <p class="section-sub" data-i18n="videos.sub">A hand-picked mix of lessons on budgeting, saving and everyday money decisions.</p>
     </div>
-
-    <div class="video-grid">
+    <div class="card-grid videos-grid">
       <div class="glass-card video-card reveal">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/qQLLDPAEzT0" title="How do you build a budget? — Khan Academy" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <h3 data-i18n="video1_title">Budget Planning</h3>
-        <p data-i18n="video1_body">A step-by-step walkthrough for building your very first monthly budget from scratch.</p>
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/M7ucIl9MGs0" title="Budget Planning" loading="lazy" allowfullscreen></iframe></div>
+        <h3 data-i18n="videos.v1">Budget Planning</h3>
       </div>
-
-      <div class="glass-card video-card reveal" style="--delay:.08s">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/cnW_HDIBmz4" title="Why and how to save — Khan Academy" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <h3 data-i18n="video2_title">Saving Money</h3>
-        <p data-i18n="video2_body">Simple, low-effort ways to grow your savings without feeling like you're depriving yourself.</p>
+      <div class="glass-card video-card reveal">
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/-Of_WRjDrx0" title="Saving Money" loading="lazy" allowfullscreen></iframe></div>
+        <h3 data-i18n="videos.v2">Saving Money</h3>
       </div>
-
-      <div class="glass-card video-card reveal" style="--delay:.16s">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/LKxOamnP8J4" title="Budgeting and the 50:30:20 rule — Khan Academy" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <h3 data-i18n="video3_title">Smart Spending</h3>
-        <p data-i18n="video3_body">Three practical steps to curb impulse spending before it happens, not after.</p>
+      <div class="glass-card video-card reveal">
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/toZ-nWetA9M" title="Smart Spending" loading="lazy" allowfullscreen></iframe></div>
+        <h3 data-i18n="videos.v3">Smart Spending</h3>
       </div>
-
-      <div class="glass-card video-card reveal" style="--delay:.24s">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/FDoHKU-pdFs" title="Our budget and planning for our future — Khan Academy" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <h3 data-i18n="video4_title">Family Budget</h3>
-        <p data-i18n="video4_body">A simple four-step process for budgeting as a household, without the chaos.</p>
+      <div class="glass-card video-card reveal">
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/sVKQn2I4HDM" title="Family Budget" loading="lazy" allowfullscreen></iframe></div>
+        <h3 data-i18n="videos.v4">Family Budget</h3>
       </div>
-
-      <div class="glass-card video-card reveal" style="--delay:.32s">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/HOH5Z6g9Ne0" title="Kids Financial Education" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <h3 data-i18n="video5_title">Kids Financial Education</h3>
-        <p data-i18n="video5_body">Fun, age-appropriate ways to start teaching children about money early.</p>
+      <div class="glass-card video-card reveal">
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/cYGiipJOiLg" title="Kids Financial Education" loading="lazy" allowfullscreen></iframe></div>
+        <h3 data-i18n="videos.v5">Kids Financial Education</h3>
       </div>
-
-      <div class="glass-card video-card reveal" style="--delay:.4s">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/ezjSvY8PCPM" title="Financial Discipline" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <h3 data-i18n="video6_title">Financial Discipline</h3>
-        <p data-i18n="video6_body">Why financial discipline matters more than income, and how to build it step by step.</p>
+      <div class="glass-card video-card reveal">
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/7lHNMGoACdQ" title="Financial Discipline" loading="lazy" allowfullscreen></iframe></div>
+        <h3 data-i18n="videos.v6">Financial Discipline</h3>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ MONEY SAVING TIPS ============ -->
+<!-- ============ TIPS ============ -->
 <section class="section section-alt" id="tips">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="tips_eyebrow">Money Saving Tips</p>
-      <h2 data-i18n="tips_heading">Small habits that add up</h2>
+      <p class="eyebrow" data-i18n="tips.eyebrow">Quick Wins</p>
+      <h2 data-i18n="tips.title">Money saving tips you can start today</h2>
     </div>
-
-    <div class="tips-grid">
-      <div class="glass-card tip-card reveal">
-        <span class="tip-num">01</span>
-        <h3 data-i18n="tip1_title">Track your expenses</h3>
-        <p data-i18n="tip1_body">Write down everything you spend for two weeks. You can't fix what you can't see.</p>
-      </div>
-      <div class="glass-card tip-card reveal" style="--delay:.06s">
-        <span class="tip-num">02</span>
-        <h3 data-i18n="tip2_title">Create a monthly budget</h3>
-        <p data-i18n="tip2_body">Give every rupee a job before the month starts, so your money has direction.</p>
-      </div>
-      <div class="glass-card tip-card reveal" style="--delay:.12s">
-        <span class="tip-num">03</span>
-        <h3 data-i18n="tip3_title">Save before spending</h3>
-        <p data-i18n="tip3_body">Move savings out the moment you're paid, so what's left is what you can spend.</p>
-      </div>
-      <div class="glass-card tip-card reveal" style="--delay:.18s">
-        <span class="tip-num">04</span>
-        <h3 data-i18n="tip4_title">Avoid impulse buying</h3>
-        <p data-i18n="tip4_body">Wait 24 hours before any non-essential purchase. Most urges fade on their own.</p>
-      </div>
-      <div class="glass-card tip-card reveal" style="--delay:.24s">
-        <span class="tip-num">05</span>
-        <h3 data-i18n="tip5_title">Compare prices before shopping</h3>
-        <p data-i18n="tip5_body">A few minutes of comparing can save more than an hour of extra work would earn.</p>
-      </div>
-      <div class="glass-card tip-card reveal" style="--delay:.3s">
-        <span class="tip-num">06</span>
-        <h3 data-i18n="tip6_title">Build an emergency fund</h3>
-        <p data-i18n="tip6_body">Even a small cushion keeps one bad month from turning into a financial crisis.</p>
-      </div>
+    <div class="card-grid tips-grid">
+      <div class="glass-card tip-card reveal"><span class="hook-bullet" aria-hidden="true"></span><p data-i18n="tips.t1">Track your expenses — you can't manage what you don't measure.</p></div>
+      <div class="glass-card tip-card reveal"><span class="hook-bullet" aria-hidden="true"></span><p data-i18n="tips.t2">Create a monthly budget and treat it like a plan, not a punishment.</p></div>
+      <div class="glass-card tip-card reveal"><span class="hook-bullet" aria-hidden="true"></span><p data-i18n="tips.t3">Save before spending — pay your future self first.</p></div>
+      <div class="glass-card tip-card reveal"><span class="hook-bullet" aria-hidden="true"></span><p data-i18n="tips.t4">Avoid impulse buying by waiting 24 hours before non-essential purchases.</p></div>
+      <div class="glass-card tip-card reveal"><span class="hook-bullet" aria-hidden="true"></span><p data-i18n="tips.t5">Compare prices before shopping, even for small everyday items.</p></div>
+      <div class="glass-card tip-card reveal"><span class="hook-bullet" aria-hidden="true"></span><p data-i18n="tips.t6">Build an emergency fund — even a small cushion reduces stress.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ BUDGET CALCULATOR ============ -->
+<!-- ============ CALCULATOR ============ -->
 <section class="section" id="calculator">
   <div class="container calc-grid">
-    <div class="calc-copy reveal">
-      <p class="eyebrow" data-i18n="calc_eyebrow">Try It Yourself</p>
-      <h2 data-i18n="calc_heading">Monthly Budget Calculator</h2>
-      <p class="section-sub" data-i18n="calc_sub">Fill in your numbers and see exactly where your money is going, and how much you can realistically save every month.</p>
-      <img class="calc-image" src="https://images.unsplash.com/photo-1711606815631-38d32cdaec3e?fm=jpg&q=80&w=1000&auto=format&fit=crop" alt="Calculator and laptop used to work out a monthly budget" loading="lazy">
+    <div class="section-head calc-head reveal">
+      <p class="eyebrow" data-i18n="calc.eyebrow">Try It Yourself</p>
+      <h2 data-i18n="calc.title">Monthly budget calculator</h2>
+      <p class="section-sub" data-i18n="calc.sub">Enter your numbers below and see where your money stands, instantly.</p>
     </div>
 
-    <div class="glass-card calc-card reveal" style="--delay:.1s">
-      <div class="calc-field">
-        <label for="income" data-i18n="calc_income">Monthly Income</label>
-        <input type="number" id="income" min="0" placeholder="0" inputmode="numeric">
-      </div>
-      <div class="calc-field">
-        <label for="rent" data-i18n="calc_rent">Rent</label>
-        <input type="number" id="rent" min="0" placeholder="0" inputmode="numeric">
-      </div>
-      <div class="calc-field">
-        <label for="food" data-i18n="calc_food">Food</label>
-        <input type="number" id="food" min="0" placeholder="0" inputmode="numeric">
-      </div>
-      <div class="calc-field">
-        <label for="transport" data-i18n="calc_transport">Transport</label>
-        <input type="number" id="transport" min="0" placeholder="0" inputmode="numeric">
-      </div>
-      <div class="calc-field">
-        <label for="bills" data-i18n="calc_bills">Bills</label>
-        <input type="number" id="bills" min="0" placeholder="0" inputmode="numeric">
-      </div>
-      <div class="calc-field">
-        <label for="other" data-i18n="calc_other">Other Expenses</label>
-        <input type="number" id="other" min="0" placeholder="0" inputmode="numeric">
-      </div>
+    <div class="glass-card calc-card reveal">
+      <form id="calcForm" class="calc-form">
+        <div class="field">
+          <label for="income" data-i18n="calc.income">Monthly Income</label>
+          <input type="number" id="income" min="0" step="1" placeholder="0" inputmode="decimal">
+        </div>
+        <div class="field">
+          <label for="rent" data-i18n="calc.rent">Rent</label>
+          <input type="number" id="rent" min="0" step="1" placeholder="0" inputmode="decimal">
+        </div>
+        <div class="field">
+          <label for="food" data-i18n="calc.food">Food</label>
+          <input type="number" id="food" min="0" step="1" placeholder="0" inputmode="decimal">
+        </div>
+        <div class="field">
+          <label for="transport" data-i18n="calc.transport">Transport</label>
+          <input type="number" id="transport" min="0" step="1" placeholder="0" inputmode="decimal">
+        </div>
+        <div class="field">
+          <label for="bills" data-i18n="calc.bills">Bills</label>
+          <input type="number" id="bills" min="0" step="1" placeholder="0" inputmode="decimal">
+        </div>
+        <div class="field">
+          <label for="other" data-i18n="calc.other">Other Expenses</label>
+          <input type="number" id="other" min="0" step="1" placeholder="0" inputmode="decimal">
+        </div>
+        <button type="submit" class="btn btn-primary calc-btn" data-i18n="calc.btn">Calculate</button>
+      </form>
 
-      <button class="btn btn-primary calc-btn" id="calcBtn" data-i18n="calc_button">Calculate My Budget</button>
-
-      <div class="calc-results" id="calcResults">
-        <div class="calc-result">
-          <span data-i18n="calc_total_expenses">Total Expenses</span>
-          <strong id="totalExpenses">Rs. 0</strong>
+      <div class="calc-results">
+        <div class="result-box">
+          <span class="result-label" data-i18n="calc.totalExpenses">Total Expenses</span>
+          <span class="result-value mono" id="resTotal">0</span>
         </div>
-        <div class="calc-result">
-          <span data-i18n="calc_remaining">Remaining Balance</span>
-          <strong id="remainingBalance">Rs. 0</strong>
+        <div class="result-box">
+          <span class="result-label" data-i18n="calc.remaining">Remaining Balance</span>
+          <span class="result-value mono" id="resRemaining">0</span>
         </div>
-        <div class="calc-result calc-result-highlight">
-          <span data-i18n="calc_savings">Monthly Savings</span>
-          <strong id="monthlySavings">Rs. 0</strong>
+        <div class="result-box highlight">
+          <span class="result-label" data-i18n="calc.savings">Monthly Savings</span>
+          <span class="result-value mono" id="resSavings">0</span>
         </div>
       </div>
+      <p class="calc-note" id="calcNote" data-i18n="calc.note">Fill in the fields above and press Calculate to see your summary.</p>
     </div>
   </div>
 </section>
@@ -360,52 +301,54 @@
 <section class="section section-alt" id="why">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="why_eyebrow">Why Learn With Me</p>
-      <h2 data-i18n="why_heading">Learning about money shouldn't feel hard</h2>
+      <p class="eyebrow" data-i18n="why.eyebrow">Why Learn With Me</p>
+      <h2 data-i18n="why.title">Learning made simple, on purpose</h2>
     </div>
-
     <div class="why-grid">
       <div class="why-item reveal">
-        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="26" height="26"><path d="M8 20l16-10 16 10-16 10z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M14 24v9c0 2 4.5 5 10 5s10-3 10-5v-9" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></div>
-        <h3 data-i18n="why1_title">Easy Language</h3>
-        <p data-i18n="why1_body">No confusing finance jargon — just plain words that make sense the first time.</p>
+        <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M4 13h18M4 7h18M4 19h12" stroke="#D9B25C" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3 data-i18n="why.i1t">Easy Language</h3>
+        <p data-i18n="why.i1d">No jargon, no confusing terms — just plain, everyday words.</p>
       </div>
-      <div class="why-item reveal" style="--delay:.06s">
-        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="26" height="26"><path d="M24 6v6M24 36v6M6 24h6M36 24h6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="24" cy="24" r="10" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></div>
-        <h3 data-i18n="why2_title">Practical Advice</h3>
-        <p data-i18n="why2_body">Every lesson ends with something you can actually do today, not just theory.</p>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="9" fill="none" stroke="#3D7CFF" stroke-width="1.8"/><path d="M13 8v5l3.5 2" stroke="#3D7CFF" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></div>
+        <h3 data-i18n="why.i2t">Practical Advice</h3>
+        <p data-i18n="why.i2d">Lessons you can actually apply the same day you learn them.</p>
       </div>
-      <div class="why-item reveal" style="--delay:.12s">
-        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="26" height="26"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 16v8l6 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div>
-        <h3 data-i18n="why3_title">Short Lessons</h3>
-        <p data-i18n="why3_body">Built for busy lives — most videos and tips take just a few minutes to get through.</p>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26"><rect x="5" y="5" width="16" height="16" rx="3" fill="none" stroke="#D9B25C" stroke-width="1.8"/><path d="M9 13h8" stroke="#D9B25C" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3 data-i18n="why.i3t">Short Lessons</h3>
+        <p data-i18n="why.i3d">Focused videos that respect your time and attention.</p>
       </div>
-      <div class="why-item reveal" style="--delay:.18s">
-        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="26" height="26"><circle cx="16" cy="16" r="6" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="32" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6 40c1-8 6-12 10-12s9 4 10 12M26 40c1-6 5-10 10-10s8 4 9 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div>
-        <h3 data-i18n="why4_title">Family Friendly</h3>
-        <p data-i18n="why4_body">Content that works whether you're managing your own money or your whole household's.</p>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="9" cy="9" r="3" fill="none" stroke="#3D7CFF" stroke-width="1.8"/><circle cx="18" cy="9" r="3" fill="none" stroke="#3D7CFF" stroke-width="1.8"/><path d="M4 21c0-3.5 2.5-5.5 5-5.5s5 2 5 5.5M14 21c0-3 2-5 4.5-5s4.5 2 4.5 5" stroke="#3D7CFF" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
+        <h3 data-i18n="why.i4t">Family Friendly</h3>
+        <p data-i18n="why.i4d">Content that works for parents, kids, and everyone in between.</p>
       </div>
-      <div class="why-item reveal" style="--delay:.24s">
-        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="26" height="26"><rect x="8" y="12" width="32" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M8 19h32" stroke="currentColor" stroke-width="2.2"/></svg></div>
-        <h3 data-i18n="why5_title">Beginner Friendly</h3>
-        <p data-i18n="why5_body">No prior finance knowledge needed — we start from zero, together.</p>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M13 4l2.5 5 5.5.8-4 3.9.9 5.5L13 16.6 8.1 19.2l.9-5.5-4-3.9 5.5-.8z" fill="none" stroke="#D9B25C" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3 data-i18n="why.i5t">Beginner Friendly</h3>
+        <p data-i18n="why.i5d">Never assumes prior knowledge — we start from the very basics.</p>
       </div>
-      <div class="why-item reveal" style="--delay:.3s">
-        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="26" height="26"><path d="M8 34l10-12 8 6 14-16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 12h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3 data-i18n="why6_title">Real-Life Examples</h3>
-        <p data-i18n="why6_body">Every concept is explained with real budgets and real situations, not made-up numbers.</p>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M4 20l6-10 4 5 3-4 5 9" fill="none" stroke="#3D7CFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 data-i18n="why.i6t">Real-Life Examples</h3>
+        <p data-i18n="why.i6d">Every lesson is grounded in situations you'll actually face.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ TODAY'S MONEY TIP ============ -->
-<section class="section" id="daily-tip">
+<section class="section" id="today-tip">
   <div class="container">
-    <div class="glass-card daily-tip-card reveal">
-      <span class="daily-tip-eyebrow" data-i18n="daily_eyebrow">Today's Money Tip</span>
-      <p class="daily-tip-text" id="dailyTipText">Loading a tip for you…</p>
-      <button class="btn btn-ghost daily-tip-btn" id="newTipBtn" data-i18n="daily_button">Show another tip</button>
+    <div class="glass-card today-tip-card reveal">
+      <div class="today-tip-icon" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 34 34"><path d="M17 4c-6 0-9 4.5-9 9 0 3.7 2 5.8 3.5 7.3.8.8 1.5 1.6 1.5 2.7v1h8v-1c0-1.1.7-1.9 1.5-2.7C24 19.8 26 17.7 26 13c0-4.5-3-9-9-9z" fill="none" stroke="#D9B25C" stroke-width="1.8"/><line x1="13.5" y1="27" x2="20.5" y2="27" stroke="#D9B25C" stroke-width="1.8" stroke-linecap="round"/><line x1="14.5" y1="30" x2="19.5" y2="30" stroke="#D9B25C" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+      <p class="eyebrow" data-i18n="todayTip.eyebrow">Today's Money Tip</p>
+      <p class="today-tip-text" id="todayTipText">Track your expenses — you can't manage what you don't measure.</p>
+      <button class="btn btn-outline small" id="newTipBtn" data-i18n="todayTip.btn">Show another tip</button>
     </div>
   </div>
 </section>
@@ -414,31 +357,21 @@
 <section class="section section-alt" id="testimonials">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="test_eyebrow">Testimonials</p>
-      <h2 data-i18n="test_heading">What people say after learning with me</h2>
+      <p class="eyebrow" data-i18n="testi.eyebrow">Testimonials</p>
+      <h2 data-i18n="testi.title">What people say after learning with me</h2>
     </div>
-
-    <div class="testimonial-grid">
-      <div class="glass-card testimonial-card reveal">
-        <p data-i18n="test1_body">"I always thought budgeting meant giving everything up. Komal's videos showed me it's really just about choosing on purpose. My savings have actually grown for the first time."</p>
-        <div class="testimonial-person">
-          <span class="avatar" style="background:#3E6AE1">SA</span>
-          <div><strong data-i18n="test1_name">Sana A.</strong><span data-i18n="test1_role">University student</span></div>
-        </div>
+    <div class="card-grid testi-grid">
+      <div class="glass-card testi-card reveal">
+        <p class="testi-quote" data-i18n="testi.q1">"I always thought budgeting meant giving up everything I enjoy. Komal's lessons showed me it's really just about being intentional. My savings finally look the way I want them to."</p>
+        <div class="testi-author"><span class="testi-name">Ayesha R.</span><span class="testi-role" data-i18n="testi.r1">University Student</span></div>
       </div>
-      <div class="glass-card testimonial-card reveal" style="--delay:.08s">
-        <p data-i18n="test2_body">"We used the family budget lesson to sit down as a household for the first time. It removed so much of the awkwardness around money conversations."</p>
-        <div class="testimonial-person">
-          <span class="avatar" style="background:#D4AF6A">FH</span>
-          <div><strong data-i18n="test2_name">Farhan H.</strong><span data-i18n="test2_role">Parent of two</span></div>
-        </div>
+      <div class="glass-card testi-card reveal">
+        <p class="testi-quote" data-i18n="testi.q2">"We started using the family budget tips with our kids, and it's opened up conversations about money we never had before. Simple, clear, and genuinely useful."</p>
+        <div class="testi-author"><span class="testi-name">Hamza &amp; Sara</span><span class="testi-role" data-i18n="testi.r2">Parents of two</span></div>
       </div>
-      <div class="glass-card testimonial-card reveal" style="--delay:.16s">
-        <p data-i18n="test3_body">"The budget calculator alone was worth it. Seeing my numbers laid out clearly made me realize where all my money was quietly leaking out."</p>
-        <div class="testimonial-person">
-          <span class="avatar" style="background:#6FA0FF">MK</span>
-          <div><strong data-i18n="test3_name">Mahnoor K.</strong><span data-i18n="test3_role">First-time earner</span></div>
-        </div>
+      <div class="glass-card testi-card reveal">
+        <p class="testi-quote" data-i18n="testi.q3">"The budget calculator alone was worth it. Seeing my numbers laid out plainly made me realize where I was leaking money every month."</p>
+        <div class="testi-author"><span class="testi-name">Fahad M.</span><span class="testi-role" data-i18n="testi.r3">First-time earner</span></div>
       </div>
     </div>
   </div>
@@ -446,47 +379,31 @@
 
 <!-- ============ FAQ ============ -->
 <section class="section" id="faq">
-  <div class="container faq-wrap">
+  <div class="container faq-container">
     <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
-      <h2 data-i18n="faq_heading">Questions I hear often</h2>
+      <p class="eyebrow" data-i18n="faq.eyebrow">Good to Know</p>
+      <h2 data-i18n="faq.title">Frequently asked questions</h2>
     </div>
-
     <div class="faq-list">
-      <div class="faq-item glass-card reveal">
-        <button class="faq-question" aria-expanded="false">
-          <span data-i18n="faq1_q">Who is this website for?</span>
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer"><p data-i18n="faq1_a">Anyone who wants a clearer relationship with money — students, parents, families, and complete beginners are all welcome here.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span data-i18n="faq.q1">Who is this website for?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer"><p data-i18n="faq.a1">Anyone who wants a clearer relationship with money — students, parents, beginners, or families looking to build better habits together.</p></div>
       </div>
-      <div class="faq-item glass-card reveal" style="--delay:.05s">
-        <button class="faq-question" aria-expanded="false">
-          <span data-i18n="faq2_q">Can beginners learn?</span>
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer"><p data-i18n="faq2_a">Yes, absolutely. Every lesson assumes no prior knowledge and builds up gently from the basics.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span data-i18n="faq.q2">Can beginners learn?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer"><p data-i18n="faq.a2">Absolutely. Every lesson is written and explained for someone starting from zero — no prior finance knowledge needed.</p></div>
       </div>
-      <div class="faq-item glass-card reveal" style="--delay:.1s">
-        <button class="faq-question" aria-expanded="false">
-          <span data-i18n="faq3_q">Are the lessons free?</span>
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer"><p data-i18n="faq3_a">Yes. Every video, tip and tool on this site is free to use, with no hidden sign-ups.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span data-i18n="faq.q3">Are the lessons free?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer"><p data-i18n="faq.a3">Yes, all the video lessons and tips on this website are completely free to watch and learn from.</p></div>
       </div>
-      <div class="faq-item glass-card reveal" style="--delay:.15s">
-        <button class="faq-question" aria-expanded="false">
-          <span data-i18n="faq4_q">How long are the videos?</span>
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer"><p data-i18n="faq4_a">Most lessons run between 5 and 15 minutes — short enough to fit into a lunch break.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span data-i18n="faq.q4">How long are the videos?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer"><p data-i18n="faq.a4">Most lessons are short and focused, usually just a few minutes, so you can learn something useful without a big time commitment.</p></div>
       </div>
-      <div class="faq-item glass-card reveal" style="--delay:.2s">
-        <button class="faq-question" aria-expanded="false">
-          <span data-i18n="faq5_q">How can I contact Komal?</span>
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer"><p data-i18n="faq5_a">Use the contact form below, or reach out directly by email or WhatsApp — details are just underneath it.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span data-i18n="faq.q5">How can I contact Komal?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer"><p data-i18n="faq.a5">You can use the contact form below, email me directly, or reach out on WhatsApp or social media — details are just below.</p></div>
       </div>
     </div>
   </div>
@@ -495,95 +412,68 @@
 <!-- ============ CONTACT ============ -->
 <section class="section section-alt" id="contact">
   <div class="container contact-grid">
-    <div class="contact-copy reveal">
-      <p class="eyebrow" data-i18n="contact_eyebrow">Contact</p>
-      <h2 data-i18n="contact_heading">Let's talk about your money goals</h2>
-      <p class="section-sub" data-i18n="contact_sub">Have a question, a topic request, or just want to say hello? I read every message myself.</p>
+    <div class="contact-info reveal">
+      <p class="eyebrow" data-i18n="contact.eyebrow">Get In Touch</p>
+      <h2 data-i18n="contact.title">Let's talk about your money goals</h2>
+      <p class="section-sub" data-i18n="contact.sub">Questions, feedback, or just want to say hello? I'd love to hear from you.</p>
 
       <ul class="contact-details">
-        <li>
-          <span class="contact-icon" aria-hidden="true">✉</span>
-          <div><strong data-i18n="contact_email_label">Email</strong><span>hello@moneyhooksbykomal.com</span></div>
-        </li>
-        <li>
-          <span class="contact-icon" aria-hidden="true">☎</span>
-          <div><strong data-i18n="contact_whatsapp_label">WhatsApp</strong><span>+92 300 1234567</span></div>
-        </li>
-        <li>
-          <span class="contact-icon" aria-hidden="true">⚑</span>
-          <div><strong data-i18n="contact_location_label">Location</strong><span data-i18n="contact_location_value">Karachi, Pakistan</span></div>
-        </li>
+        <li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 4h14v10H2z" fill="none" stroke="#D9B25C" stroke-width="1.4"/><path d="M2 4l7 6 7-6" fill="none" stroke="#D9B25C" stroke-width="1.4"/></svg><span>hello@moneyhooksbykomal.com</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M4 2h4l1.5 4-2 1.5a10 10 0 0 0 5 5l1.5-2 4 1.5v4a2 2 0 0 1-2 2C9 18 0 9 2 4a2 2 0 0 1 2-2z" fill="none" stroke="#3D7CFF" stroke-width="1.3"/></svg><span>+92 300 1234567 <span data-i18n="contact.whatsapp">(WhatsApp)</span></span></li>
+        <li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M9 17s6-5.6 6-10a6 6 0 1 0-12 0c0 4.4 6 10 6 10z" fill="none" stroke="#D9B25C" stroke-width="1.4"/><circle cx="9" cy="7" r="2.2" fill="none" stroke="#D9B25C" stroke-width="1.3"/></svg><span data-i18n="contact.location">Peshawar, Pakistan</span></li>
       </ul>
 
       <div class="social-icons">
-        <a href="#" aria-label="Instagram" class="social-icon"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
-        <a href="#" aria-label="YouTube" class="social-icon"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9l6 3-6 3z" fill="currentColor"/></svg></a>
-        <a href="#" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M14 21v-8h3l1-4h-4V7c0-1 .5-2 2-2h2V1h-3c-3 0-5 2-5 5v3H7v4h3v8z" fill="currentColor"/></svg></a>
-        <a href="#" aria-label="LinkedIn" class="social-icon"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="8" cy="8.5" r="1.3" fill="currentColor"/><path d="M8 11v7M12 11v7M12 14c0-2 4-3 4 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        <a href="#" aria-label="Instagram" class="social-icon"><svg width="18" height="18" viewBox="0 0 18 18"><rect x="1.5" y="1.5" width="15" height="15" rx="4" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="9" cy="9" r="3.6" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="13.2" cy="4.8" r="0.9" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Facebook" class="social-icon"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M11 17v-6h2l.4-3H11V6.2c0-.9.3-1.5 1.6-1.5H13.5V2.1C13.2 2 12.3 2 11.2 2 8.9 2 7.4 3.4 7.4 5.9V8H5v3h2.4v6z" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="YouTube" class="social-icon"><svg width="18" height="18" viewBox="0 0 18 18"><rect x="1.5" y="4" width="15" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M7.5 7l4 2.2-4 2.2z" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="LinkedIn" class="social-icon"><svg width="18" height="18" viewBox="0 0 18 18"><rect x="1.5" y="1.5" width="15" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="5.6" cy="5.6" r="1" fill="currentColor"/><line x1="5.6" y1="8" x2="5.6" y2="13" stroke="currentColor" stroke-width="1.3"/><path d="M8.6 13V9.8c0-1.6 2.4-1.8 2.4 0V13" stroke="currentColor" stroke-width="1.3" fill="none"/><line x1="11" y1="8" x2="11" y2="13" stroke="currentColor" stroke-width="1.3"/></svg></a>
       </div>
     </div>
 
-    <form class="glass-card contact-form reveal" style="--delay:.1s" id="contactForm">
-      <div class="form-field">
-        <label for="cf-name" data-i18n="contact_name">Name</label>
-        <input type="text" id="cf-name" required>
+    <form class="glass-card contact-form reveal" id="contactForm" novalidate>
+      <div class="field">
+        <label for="cName" data-i18n="contact.name">Name</label>
+        <input type="text" id="cName" name="name" required>
       </div>
-      <div class="form-field">
-        <label for="cf-email" data-i18n="contact_email">Email</label>
-        <input type="email" id="cf-email" required>
+      <div class="field">
+        <label for="cEmail" data-i18n="contact.email">Email</label>
+        <input type="email" id="cEmail" name="email" required>
       </div>
-      <div class="form-field">
-        <label for="cf-message" data-i18n="contact_message">Message</label>
-        <textarea id="cf-message" rows="4" required></textarea>
+      <div class="field">
+        <label for="cMessage" data-i18n="contact.message">Message</label>
+        <textarea id="cMessage" name="message" rows="4" required></textarea>
       </div>
-      <button type="submit" class="btn btn-primary" data-i18n="contact_send">Send Message</button>
-      <p class="form-note" id="formNote" data-i18n="contact_note">Thank you! I'll get back to you within a couple of days.</p>
+      <button type="submit" class="btn btn-primary" data-i18n="contact.send">Send Message</button>
+      <p class="form-status" id="formStatus" role="status"></p>
     </form>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
-  <div class="container footer-grid">
+  <div class="container footer-inner">
     <div class="footer-brand">
-      <a href="#top" class="logo">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" width="28" height="28">
-            <circle cx="20" cy="20" r="18" fill="none" stroke="url(#logoGrad2)" stroke-width="2"/>
-            <path d="M13 24c1.5-6 4-9 7-9s5.5 3 7 9" fill="none" stroke="url(#logoGrad2)" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="20" cy="15" r="2.6" fill="#D4AF6A"/>
-            <defs>
-              <linearGradient id="logoGrad2" x1="0" y1="0" x2="40" y2="40">
-                <stop offset="0" stop-color="#6FA0FF"/>
-                <stop offset="1" stop-color="#D4AF6A"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
-        <span class="logo-text">Money Hooks <em>by Komal</em></span>
-      </a>
-      <p data-i18n="footer_tagline">Practical money lessons for real, everyday life.</p>
+      <span class="logo-mark small" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="24" height="24"><path d="M14 6 C14 6 12 6 12 12 L12 24 C12 29 16 31 20 29 C24 27 24 22 20 21 C17 20 16 23 18 24.5" fill="none" stroke="url(#hookGrad)" stroke-width="2.6" stroke-linecap="round"/><circle cx="14" cy="6" r="2.2" fill="url(#hookGrad)"/></svg>
+      </span>
+      <span>Money Hooks <em>by Komal</em></span>
     </div>
 
-    <div class="footer-col">
-      <h4 data-i18n="footer_links_title">Quick Links</h4>
-      <a href="#about" data-i18n="nav_about">About</a>
-      <a href="#videos" data-i18n="nav_videos">Videos</a>
-      <a href="#calculator" data-i18n="nav_calculator">Calculator</a>
-      <a href="#faq" data-i18n="nav_faq">FAQ</a>
-    </div>
+    <nav class="footer-links">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#videos" data-i18n="nav.videos">Videos</a>
+      <a href="#calculator" data-i18n="nav.calculator">Calculator</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="#" data-i18n="footer.terms">Terms</a>
+    </nav>
 
-    <div class="footer-col">
-      <h4 data-i18n="footer_legal_title">Legal</h4>
-      <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
-      <a href="#" data-i18n="footer_terms">Terms of Use</a>
-    </div>
+    <p class="footer-copy">© <span id="year"></span> <span data-i18n="footer.copyRest">Money Hooks by Komal. All rights reserved.</span></p>
   </div>
-
-  <div class="container footer-bottom">
-    <p><span id="footerYear"></span> Money Hooks by Komal. <span data-i18n="footer_rights">All rights reserved.</span></p>
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-  </div>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 13V3M3 7l5-5 5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 </footer>
 
 <script src="script.js"></script>
